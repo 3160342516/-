@@ -20,6 +20,8 @@ module.exports = {
     'no-alert': 0, // 禁止使用alert confirm prompt - 关闭
     'arrow-parens': 0, // 箭头函数用小括号括起来 - 关闭 // 版权声明：本文为CSDN博主「房东的猫__」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 // 原文链接：https://blog.csdn.net/weixin_47929185/article/details/108298235
     'vue/multi-word-component-names': 0,
-    'keyword-spacing': 0
+    'keyword-spacing': 0,
+    'no-unused-expressions': 0,
+    'no-sequences': 0
   }
 }
