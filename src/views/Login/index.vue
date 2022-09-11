@@ -88,6 +88,8 @@ export default {
         // axios封装的error对象
         // - error .response .data 后端返回的数据
         // - error .response .status 后端返回的状态码
+        console.log(error.response)
+        console.log(error.response.data)
         if (error.response && error.response.status === 400) {
           this.$toast.fail(error.response.data.message)
         } else {
@@ -108,8 +110,8 @@ export default {
         this.$toast.success('发送验证码成功')
       } catch (error) {
         if (
-          (error.response && error.response.status === 429) ||
-          error.response.status === 404
+          error.response &&
+          (error.response.status === 429 || error.response.status === 404)
         ) {
           this.$toast.fail(error.response.data.message)
         } else {

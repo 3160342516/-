@@ -21,3 +21,13 @@ export const sendCodeAPI = (mobile) => {
     url: `/v1_0/sms/codes/${mobile}`
   })
 }
+
+/**
+ * 获取用户信息
+ * @returns promise
+ */
+export const getUserInfoAPI = () => {
+  return request({
+    url: '/v1_0/user'
+  })
+}
