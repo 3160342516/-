@@ -13,7 +13,7 @@
       :label="label"
     />
     <!-- 三张 -->
-    <van-cell v-else title="三张">
+    <van-cell v-else :title="article.title">
       <template #label>
         <van-image
           v-for="(item, index) in article.cover.images"
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import dayjs from '@/utils/dayjs'
 export default {
   props: {
     article: {
@@ -37,8 +38,8 @@ export default {
   },
   computed: {
     label() {
-      const { aut_name, comm_count, pubdata } = this.article
-      return `${aut_name} ${comm_count}评论 ${pubdata}`
+      const { aut_name, comm_count, pubdate } = this.article
+      return `${aut_name} ${comm_count}评论 ${dayjs(pubdate).fromNow()}`
     }
   }
 }
