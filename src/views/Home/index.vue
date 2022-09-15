@@ -3,7 +3,14 @@
     <!-- 搜索栏 -->
     <van-nav-bar class="navbar">
       <template #title>
-        <van-button icon="search" size="small" round block>搜索</van-button>
+        <van-button
+          icon="search"
+          size="small"
+          round
+          block
+          @click="$router.push('/Search')"
+          >搜索</van-button
+        >
       </template>
     </van-nav-bar>
     <!-- 新闻 -->
