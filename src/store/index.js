@@ -15,7 +15,8 @@ export default new Vuex.Store({
   state: {
     tokenObj: {},
     myChannels: [],
-    histories: []
+    histories: [],
+    commentslist: []
   },
   getters: {
     islogin(state) {
@@ -31,6 +32,10 @@ export default new Vuex.Store({
     },
     SET_HISTORIES(state, histories) {
       state.histories = histories
+    },
+    SET_COMMENTSLIST(state, list) {
+      console.log(list)
+      state.commentslist = list
     }
   },
   plugins: [

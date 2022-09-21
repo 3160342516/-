@@ -5,15 +5,30 @@
       v-if="article.cover.type === 0"
       :title="article.title"
       :label="label"
+      :to="{
+        name: 'detail',
+        params: { articleID: article.art_id }
+      }"
     />
     <!-- 一张 -->
     <van-cell
       v-else-if="article.cover.type === 1"
       :title="article.title"
       :label="label"
+      :to="{
+        name: 'detail',
+        params: { articleID: article.art_id }
+      }"
     />
     <!-- 三张 -->
-    <van-cell v-else :title="article.title">
+    <van-cell
+      v-else
+      :title="article.title"
+      :to="{
+        name: 'detail',
+        params: { articleID: article.art_id }
+      }"
+    >
       <template #label>
         <van-image
           v-for="(item, index) in article.cover.images"

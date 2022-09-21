@@ -5,8 +5,8 @@ import store from '@/store'
 // axios.defaults.timeout = 5000
 
 const request = axios.create({
-  baseURL: 'http://toutiao.itheima.net',
-  timeout: 5000
+  baseURL: 'http://toutiao.itheima.net'
+  //   timeout: 5000
 })
 
 request.interceptors.request.use(

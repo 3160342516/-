@@ -4,7 +4,8 @@ module.exports = {
   plugins: [
     pxToRem({
       rootValue: ({ file }) => (/vant/.test(file) ? 37.5 : 75),
-      propList: ['*']
+      propList: ['*'],
+      exclude: 'github-markdown'
     })
   ]
 }
